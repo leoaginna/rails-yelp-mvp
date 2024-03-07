@@ -18,10 +18,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
     redirect_to restaurant_path(@restaurant)
-    format.turbo_stream { render turbo_stream: turbo_stream.replace('restaurants_list', partial: 'restaurants/list', locals: { restaurants: Restaurant.all }) }
-  end
-
-  def edit
+    # format.turbo_stream { render turbo_stream: turbo_stream.replace('restaurants_list', partial: 'restaurants/list', locals: { restaurants: Restaurant.all }) }
   end
 
   def update

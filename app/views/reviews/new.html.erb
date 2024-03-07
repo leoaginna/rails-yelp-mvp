@@ -6,4 +6,5 @@
 
   <%= form.submit "Create Review" %>
   <%= link_to "Cancel", restaurant_path(@restaurant), class: "btn btn-secondary" %>
+  <%= form.error_notification %>
 <% end %>
