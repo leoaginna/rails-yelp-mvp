@@ -1,0 +1,9 @@
+<h1>New Review for <%= @restaurant.name %></h1>
+
+
+<%= simple_form_for([@restaurant, @review], url: restaurant_reviews_path(@restaurant), method: :post) do |form| %>
+   <%= form.input :content, as: :text %>
+
+  <%= form.submit "Create Review" %>
+  <%= link_to "Cancel", restaurant_path(@restaurant), class: "btn btn-secondary" %>
+<% end %>
